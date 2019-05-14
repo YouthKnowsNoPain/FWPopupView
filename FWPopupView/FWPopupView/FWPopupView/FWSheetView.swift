@@ -207,7 +207,11 @@ extension FWSheetView {
             btn.layer.borderColor = self.vProperty.splitColor.cgColor
             btn.setBackgroundImage(self.getImageWithColor(color: btn.backgroundColor!), for: .normal)
             btn.setBackgroundImage(self.getImageWithColor(color: self.vProperty.itemPressedColor), for: .highlighted)
-            btn.titleLabel?.font = self.vProperty.buttonFont
+            if popupItem.itemFont != nil {
+                btn.titleLabel?.font = popupItem.itemFont
+            } else {
+                btn.titleLabel?.font = self.vProperty.buttonFont
+            }
             
             tmpIndex += 1
         }
