@@ -175,8 +175,8 @@ extension FWDemoViewController {
             break
         case 2:
             // 注意：此时“确定”按钮是不让按钮自己隐藏的
-            let items = [FWPopupItem(title: "取消", itemType: .normal, isCancel: true, canAutoHide: true, itemTitleColor: kPV_RGBA(r: 141, g: 151, b: 163, a: 1.0), itemBackgroundColor: nil, itemClickedBlock: block),
-                         FWPopupItem(title: "确定", itemType: .normal, isCancel: false, canAutoHide: true, itemTitleColor: kPV_RGBA(r: 29, g: 150, b: 227, a: 1.0), itemBackgroundColor: nil, itemClickedBlock: block)]
+            let items = [FWPopupItem(title: "取消", itemType: .normal, isCancel: true, canAutoHide: true, itemTitleColor: kPV_RGBA(r: 141, g: 151, b: 163, a: 1.0),itemFont:UIFont.systemFont(ofSize: 44.0, weight: .medium), itemBackgroundColor: nil, itemClickedBlock: block),
+                         FWPopupItem(title: "确定", itemType: .normal, isCancel: false, canAutoHide: true, itemTitleColor: kPV_RGBA(r: 29, g: 150, b: 227, a: 1.0),itemFont:UIFont.systemFont(ofSize: 22.0, weight: .medium), itemBackgroundColor: nil, itemClickedBlock: block)]
             
             // 演示：修改参数
             let vProperty = FWAlertViewProperty()

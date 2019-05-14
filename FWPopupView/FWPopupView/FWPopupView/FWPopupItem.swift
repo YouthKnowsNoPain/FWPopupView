@@ -43,6 +43,8 @@ open class FWPopupItem: NSObject {
     @objc open var itemTitleColor: UIColor?
     /// 按钮背景颜色
     @objc open var itemBackgroundColor: UIColor?
+    /// 按钮字体
+    @objc open var itemFont:UIFont?
     
     /// 标题
     @objc open var title: String
@@ -70,7 +72,7 @@ open class FWPopupItem: NSObject {
         self.setupItemType(itemType: itemType)
     }
     
-    @objc public init(title: String, itemType: FWItemType, isCancel: Bool, canAutoHide: Bool, itemTitleColor: UIColor?, itemBackgroundColor: UIColor?, itemClickedBlock: FWPopupItemClickedBlock? = nil) {
+    @objc public init(title: String, itemType: FWItemType, isCancel: Bool, canAutoHide: Bool, itemTitleColor: UIColor?, itemFont:UIFont?, itemBackgroundColor: UIColor?, itemClickedBlock: FWPopupItemClickedBlock? = nil) {
         
         self.title = title
         self.itemType = itemType
@@ -78,6 +80,7 @@ open class FWPopupItem: NSObject {
         self.canAutoHide = canAutoHide
         self.itemTitleColor = itemTitleColor
         self.itemBackgroundColor = itemBackgroundColor
+        self.itemFont = itemFont
         self.itemClickedBlock = itemClickedBlock
         
         super.init()
