@@ -999,12 +999,12 @@ extension FWPopupView {
 open class FWPopupViewProperty: NSObject {
     
     /// 标题字体大小
-    @objc open var titleFontSize: CGFloat           = 18.0
+    @objc open var titleFont: UIFont                = UIFont.systemFont(ofSize: 18)
     /// 标题文字颜色
     @objc open var titleColor: UIColor              = kPV_RGBA(r: 51, g: 51, b: 51, a: 1)
     
     /// 按钮字体大小
-    @objc open var buttonFontSize: CGFloat          = 17.0
+    @objc open var buttonFont: UIFont               = UIFont.systemFont(ofSize: 17)
     /// 按钮高度
     @objc open var buttonHeight: CGFloat            = 48.0
     /// 普通按钮文字颜色

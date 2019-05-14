@@ -84,7 +84,7 @@ class FWDemoViewController: UITableViewController {
         let vProperty = FWSheetViewProperty()
         vProperty.touchWildToHide = "1"
         vProperty.titleColor = UIColor.lightGray
-        vProperty.titleFontSize = 15.0
+        vProperty.titleFont = UIFont.systemFont(ofSize: 15.0)
         
         let sheetView = FWSheetView.sheet(title: "你们知道微信中为什么经常使用这种提示，而不使用Alert加两个按钮的那种提示吗？", itemTitles: items, itemBlock: { (popupView, index, title) in
             print("Sheet：点击了第\(index)个按钮")
@@ -181,10 +181,10 @@ extension FWDemoViewController {
             // 演示：修改参数
             let vProperty = FWAlertViewProperty()
             vProperty.alertViewWidth = max(UIScreen.main.bounds.width * 0.65, 275)
-            vProperty.titleFontSize = 17.0
-            vProperty.detailFontSize = 14.0
+            vProperty.titleFont = UIFont.systemFont(ofSize: 17.0)
+            vProperty.detailFont = UIFont.systemFont(ofSize: 14.0)
             vProperty.detailColor = kPV_RGBA(r: 141, g: 151, b: 163, a: 1.0)
-            vProperty.buttonFontSize = 14.0
+            vProperty.buttonFont = UIFont.systemFont(ofSize: 14.0)
             vProperty.maskViewColor = UIColor(white: 0, alpha: 0.5)
             vProperty.touchWildToHide = "1"
             // 还有很多参数可设置...
